@@ -9,9 +9,19 @@ from flask_login import current_user
 
 item = Blueprint('items', 'item')
 
-# current directory is this '/api/v1/items'
+# current directory is this '/api/v1/resources
 @item.route('/', methods=["GET"])
 def get_all_items():
+    ## find the dogs and change each one to a dictionary into a new array
+    try:
+        items = [model_to_dict(item) for item in models.Item.select()]
+        print(items)
+        return jsonify(data=items, status={"code": 201, "message": "Success"})
+    except models.DoesNotExist:
+        return jsonify(data={}, status={"code": 401, "message": "Error getting the resources"})
+
+@item.route('/mypage', methods=["GET"])
+def get_my_items():
     try:
         items = [model_to_dict(item) for item in current_user.items]
         print(items)
@@ -20,7 +30,7 @@ def get_all_items():
         return jsonify(data={}, status={"code": 401, "message": "Error getting the resources"})
 
 # Create route
-@item.route('/', methods=["POST"])
+@item.route('/mypage', methods=["POST"])
 def create_items():
     payload = request.get_json()
 
@@ -38,14 +48,14 @@ def create_items():
     return jsonify(data=item_dict, status={"code": 201, "message": "Success"})
 
 # Show route
-@item.route('/<id>', methods=['GET'])
+@item.route('/mypage/<id>', methods=['GET'])
 def get_one_item(id):
     dog = models.Item.get_by_id(id)
     print(item.__dict__)
     return jsonify(data=model_to_dict(item), status={"code": 200, "message": "Success"})
 
 # Update route
-@item.route('/<id>', methods=["PUT"])
+@item.route('/mypage/<id>', methods=["PUT"])
 def update_dog(id):
     payload = request.get_json()
     print(payload)
@@ -56,7 +66,7 @@ def update_dog(id):
     return jsonify(data=item, status={"code": 200, "message": "Success"})
 
 # Delete route
-@item.route('/<id>', methods=["Delete"])
+@item.route('/mypage/<id>', methods=["Delete"])
 def delete_item(id):
     #delete item with id
     delete_query = query = models.Item.delete().where(models.Item.id==id)
