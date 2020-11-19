@@ -29,12 +29,13 @@ export default class EditItemForm extends Component {
   render() {
     return (
       <div className='editItemForm'>
-        <h2>Upload a Resource</h2>
+        <h2>Edit Resource</h2>
         <form>
           <fieldset>
             <label>Resource name:</label>
             <input
               type="text"
+              name="name"
               value={this.state.name}
               placeholder="Enter a resource"
               onChange={this.handleChange}
@@ -44,6 +45,7 @@ export default class EditItemForm extends Component {
             <label>Link:</label>
             <input
               type="text"
+              name="Link"
               value={this.state.link}
               placeholder="Enter a link"
               onChange={this.handleChange}
@@ -52,6 +54,7 @@ export default class EditItemForm extends Component {
           <fieldset>
             <label>Description:</label>
             <textarea rows="3"
+              name="description"
               value={this.state.description}
               onChange={this.handleChange}>Enter a description
             </textarea>
@@ -60,12 +63,13 @@ export default class EditItemForm extends Component {
             <label>Image/video link (optional):</label>
             <input
               type="text"
+              name="media_link"
               value={this.state.link}
               placeholder="Enter a media link"
               onChange={this.handleChange}
             />
           </fieldset>
-          <button type="submit">Upload Resource</button>
+          <button type="submit">Edit Resource</button>
         </form>
       </div>
     )
