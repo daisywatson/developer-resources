@@ -12,7 +12,6 @@ item = Blueprint('items', 'item')
 # current directory is this '/api/v1/resources
 @item.route('/', methods=["GET"])
 def get_all_items():
-    ## find the dogs and change each one to a dictionary into a new array
     try:
         items = [model_to_dict(item) for item in models.Item.select()]
         print(items)
@@ -50,13 +49,13 @@ def create_items():
 # Show route
 @item.route('/mypage/<id>', methods=['GET'])
 def get_one_item(id):
-    dog = models.Item.get_by_id(id)
+    item = models.Item.get_by_id(id)
     print(item.__dict__)
     return jsonify(data=model_to_dict(item), status={"code": 200, "message": "Success"})
 
 # Update route
 @item.route('/mypage/<id>', methods=["PUT"])
-def update_dog(id):
+def update_item(id):
     payload = request.get_json()
     print(payload)
 
