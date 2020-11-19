@@ -26,7 +26,7 @@ class Item(Model):
 
 def initialize():
     DATABASE.connect()
-    # Creating table dog when we're initializing
+    # Creating table when we're initializing
     DATABASE.create_tables([User, Item], safe=True)
     print("TABLES Created")
     DATABASE.close()
