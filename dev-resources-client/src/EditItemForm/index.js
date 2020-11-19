@@ -45,7 +45,7 @@ export default class EditItemForm extends Component {
             <label>Link:</label>
             <input
               type="text"
-              name="Link"
+              name="link"
               value={this.state.link}
               placeholder="Enter a link"
               onChange={this.handleChange}
