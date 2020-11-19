@@ -30,7 +30,7 @@ def get_my_items():
         return jsonify(data={}, status={"code": 401, "message": "Error getting the resources"})
 
 # Create route
-@item.route('/mypage', methods=["POST"])
+@item.route('/mypage/create', methods=["POST"])
 def create_items():
     payload = request.get_json()
 
