@@ -18,7 +18,7 @@ def register():
     payload = request.get_json()
     print(payload)
 
-    payload['username'] = payload['email'].lower()
+    payload['username'] = payload['username'].lower()
 
     try:
         models.User.get(models.User.username == payload['username'])
