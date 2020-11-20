@@ -47,20 +47,20 @@ export default class Login extends Component {
           <fieldset>
           <label>Username:<label>
   				<input
-  					type=‘text’
-  					name=‘username’
+  					type='text’
+  					name='username’
   					value={this.state.username}
-  					placeholder=‘username’
+  					placeholder='username’
   					onChange={this.handleChange}
   					/>
           </fieldset>
           <fieldset>
             <label>Password<label>
     				<input
-    					type=‘password’
-    					name=‘password’
+    					type='password’
+    					name='password’
     					value={this.state.password}
-    					placeholder=‘password’
+    					placeholder='password’
     					onChange={this.handleChange}
     					/>
             </fieldset>
