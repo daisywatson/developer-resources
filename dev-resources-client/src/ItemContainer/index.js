@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import ItemList from '../ItemList'
+import ResourceList from '../ResourceList'
 import NewItemForm from '../NewItemForm'
 import EditItemForm from '../EditItemForm'
 
