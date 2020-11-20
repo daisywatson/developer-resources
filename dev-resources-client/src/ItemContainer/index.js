@@ -144,7 +144,7 @@ export default class ItemContainer extends Component {
         <h1>Developer Resource Site</h1>
         <h3>My Resource List:</h3>
         <NewItemForm createItem={this.createItem} />
-        <ItemList
+        <ResourceList
           items={this.state.items}
           editItem={this.editItem}
           deleteItem={this.deleteItem}
