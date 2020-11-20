@@ -18,7 +18,7 @@ export default class NewItemForm extends Component {
     })
   }
 
-//the createItem variable needs to match what RN creates in main container
+
   handleSubmit = (event) => {
     event.preventDefault()
     this.props.createItem(this.state)

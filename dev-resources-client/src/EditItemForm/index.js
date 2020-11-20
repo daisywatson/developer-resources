@@ -20,7 +20,7 @@ export default class EditItemForm extends Component {
     })
   }
 
-  //variable updateItem needs to to match what RN creates in main container
+  
   handleSubmit = (event) => {
     event.preventDefault()
       this.props.updateItem(this.state)
