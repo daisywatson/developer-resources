@@ -106,9 +106,9 @@ export default class ItemContainer extends Component {
       const updateItemJson = await updateItemResponse.json()
       console.log("updateItemJson", updateItemJson)
 
-      if(updateItemResponse.status == 200) {
+      if(updateItemResponse.status === 200) {
         const items = this.state.items
-        const indexOfItemBeingUpdated = items.findIndex(item => item.id == this.state.idOfItemToEdit)
+        const indexOfItemBeingUpdated = items.findIndex(item => item.id === this.state.idOfItemToEdit)
         items[indexOfItemBeingUpdated] = updateItemJson.data
         this.setState({
           items: items,
