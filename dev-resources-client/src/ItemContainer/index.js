@@ -59,7 +59,7 @@ export default class ItemContainer extends Component {
 
     try {
 
-      const url = process.env.REACT_APP_API_URL + "/api/v1/resources/" + idOfItemToDelete
+      const url = process.env.REACT_APP_API_URL + "/api/v1/resources/mypage/" + idOfItemToDelete
 
       const deleteItemResponse = await fetch(url, {
 
@@ -139,7 +139,7 @@ export default class ItemContainer extends Component {
   updateItem = async (updatedItemInfo) => {
     try {
 
-      const url = process.env.REACT_APP_API_URL + "/api/v1/resources/" + this.state.idOfItemToEdit
+      const url = process.env.REACT_APP_API_URL + "/api/v1/resources/mypage/" + this.state.idOfItemToEdit
 
       const updateItemResponse = await fetch(url, {
 
@@ -154,10 +154,11 @@ export default class ItemContainer extends Component {
 
       console.log("updateItemResponse", updateItemResponse)
       const updateItemJson = await updateItemResponse.json()
+      console.log(updatedItemInfo)
       console.log("updateItemJson", updateItemJson)
 
       if(updateItemResponse.status === 200) {
-
+        console.log('Successfully updated item!')
         const items = this.state.items
 
         const indexOfItemBeingUpdated = items.findIndex(item => item.id === this.state.idOfItemToEdit)

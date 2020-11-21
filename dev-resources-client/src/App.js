@@ -13,7 +13,7 @@ export default class App extends Component {
 
     this.state = {
       loggedIn: false,
-      loggedInUserEmail: '' 
+      loggedInUsername: '' 
     }
   }
 
@@ -45,7 +45,7 @@ export default class App extends Component {
       this.setState({
 
         loggedIn: true,
-        loggedInUserEmail: registerJson.data.email
+        loggedInUsername: registerJson.data.username
 
       })
      }
@@ -83,7 +83,7 @@ export default class App extends Component {
       if(loginResponse.status === 200) {
         this.setState({
           loggedIn: true,
-          loggedInUserEmail: loginJson.data.email
+          loggedInUsername: loginJson.data.username
         })
       }
     } catch(error) {
@@ -115,7 +115,7 @@ export default class App extends Component {
         this.setState({
 
           loggedIn: false,
-          loggedInUserEmail: ''
+          loggedInUsername: ''
 
         })
 
@@ -145,7 +145,7 @@ export default class App extends Component {
 
           <React.Fragment>
 
-            <Header email={this.state.loggedInUserEmail} logout={this.logout} />
+            <Header username={this.state.loggedInUsername} logout={this.logout} />
 
             <ItemContainer />
 

@@ -11,9 +11,9 @@ export default class LoginAndRegistrationForm extends Component {
 
 
 		this.state = {
-			email: '',
-			password: '',
+		
 			username: '',
+			password: '',
 			action: 'Login' // will track whether we are logging in or registering
 		}
 	}
@@ -64,9 +64,7 @@ export default class LoginAndRegistrationForm extends Component {
 	        <h2>{this.state.action} here</h2>
 
 	        <Form onSubmit={this.handleSubmit}>
-	        {
-	        	this.state.action === "Register"
-	        	&&
+	    
 
 	        	<Form.Input
 	             type="text"
@@ -76,16 +74,6 @@ export default class LoginAndRegistrationForm extends Component {
 	             onChange={this.handleChange}
 	           	/>
 
-	        }
-	          
-	          	<Form.Input
-	             type="email"
-	             name="email"
-	             placeholder="Enter an email"
-	             value={this.state.email}
-	             onChange={this.handleChange}
-	            />
-	          
 	            <Form.Input
 	             type="password"
 	             name="password"
@@ -95,7 +83,7 @@ export default class LoginAndRegistrationForm extends Component {
 	          	/>
 
 	          	<Button type="Submit">
-	            	{ this.state.action === "Login" ? "Log in" : "Sign up"}
+	            	{ this.state.action === "Login" ? "Log in" : "Sign up" }
 	          	</Button>
 	        </Form>
 	        
