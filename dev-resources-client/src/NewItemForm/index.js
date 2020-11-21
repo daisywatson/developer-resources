@@ -50,7 +50,7 @@ export default class NewItemForm extends Component {
         <h2>Upload a Resource</h2>
         <Form onSubmit={this.handleSubmit}>
 
-          <Label>Resource name:</Label>
+          <Label horizontal>Resource name:</Label>
           <Form.Input
             type="text"
             name="name"
@@ -59,7 +59,7 @@ export default class NewItemForm extends Component {
             onChange={this.handleChange}
           />
 
-          <Label>Link:</Label>
+          <Label horizontal>Link:</Label>
           <Form.Input
             type="text"
             name="link"
@@ -68,7 +68,7 @@ export default class NewItemForm extends Component {
             onChange={this.handleChange}
           />
 
-          <Label>Description:</Label>
+          <Label horizontal>Description:</Label>
           <TextArea
             rows={3}
             name="description"
@@ -77,7 +77,7 @@ export default class NewItemForm extends Component {
             onChange={this.handleChange}
           />
 
-          <Label>Media(optional):</Label>
+          <Label horizontal>Media(optional):</Label>
           <Form.Input
             type="text"
             name="media_link"

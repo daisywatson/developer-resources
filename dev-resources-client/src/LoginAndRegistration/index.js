@@ -11,7 +11,7 @@ export default class LoginAndRegistrationForm extends Component {
 
 
 		this.state = {
-		
+
 			username: '',
 			password: '',
 			action: 'Login' // will track whether we are logging in or registering
@@ -61,10 +61,10 @@ export default class LoginAndRegistrationForm extends Component {
 	render() {
 		return (
 	      <div>
-	        <h2>{this.state.action} here</h2>
+	        <h2>{this.state.action} Here</h2>
 
 	        <Form onSubmit={this.handleSubmit}>
-	    
+
 
 	        	<Form.Input
 	             type="text"
@@ -86,7 +86,7 @@ export default class LoginAndRegistrationForm extends Component {
 	            	{ this.state.action === "Login" ? "Log in" : "Sign up" }
 	          	</Button>
 	        </Form>
-	        
+
 	        {
 	          this.state.action === "Login"
 	          ?

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import ItemsList from '../ItemsList'
 import NewItemForm from '../NewItemForm'
 import EditItemForm from '../EditItemForm'
+import HomeContainer from '../HomeContainer'
 
 //*************************************************************************
 
@@ -14,7 +15,8 @@ export default class ItemContainer extends Component {
       this.state = {
 
         items: [],
-        idOfItemToEdit: -1
+        idOfItemToEdit: -1,
+        action: ''
 
       }
     }
@@ -178,6 +180,12 @@ export default class ItemContainer extends Component {
     }
   }
 
+  setActionState = (action) => {
+    this.setState({
+      action: action
+    })
+  }
+
 //*************************************************************************
 
  render() {
@@ -185,12 +193,21 @@ export default class ItemContainer extends Component {
      <div className="itemContainer">
         <h1>Developer Resource Site</h1>
         <h3>My Resource List:</h3>
-        <NewItemForm createItem={this.createItem} />
-        <ItemsList
-          items={this.state.items}
-          editItem={this.editItem}
-          deleteItem={this.deleteItem}
-        />
+        <button onClick={() =>this.setActionState('Home Container')}> View All Resources </button>
+        {
+          this.state.action === 'Home Container'
+          ?
+          <HomeContainer />
+          :
+          <React.Fragment>
+          <NewItemForm createItem={this.createItem} />
+          <ItemsList
+            items={this.state.items}
+            editItem={this.editItem}
+            deleteItem={this.deleteItem}
+          />
+          </React.Fragment>
+        }
 
         {
           this.state.idOfItemToEdit !== -1

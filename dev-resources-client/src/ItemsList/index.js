@@ -24,15 +24,9 @@ export default function ItemsList(props) {
 
 				<Card.Content textAlign={'center'}>
 
-					<Button basic color='red'
-					onClick={() => props.deleteItem(item.id)}>
-					Delete {item.name}
-					</Button>
-
-					<Button basic color='green'
-					onClick={() => props.editItem(item.id)}>
-					Edit {item.name}
-					</Button>
+					<Button primary onClick={() => props.editItem(item.id)}> Edit </Button>
+					<Button primary onClick={() => props.deleteItem(item.id)}>
+					Delete </Button>
 
 				</Card.Content>
 			</Card>
