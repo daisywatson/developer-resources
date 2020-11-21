@@ -4,7 +4,7 @@ import ItemContainer from './ItemContainer'
 import LoginAndRegistration from './LoginAndRegistration'
 import Header from './Header'
 
-//*************************************************************************
+//***********************************************************************
 
 export default class App extends Component {
 
