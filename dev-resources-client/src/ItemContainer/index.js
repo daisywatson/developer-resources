@@ -91,7 +91,7 @@ export default class ItemContainer extends Component {
 
     try {
 
-      const url = process.env.REACT_APP_API_URL + "/api/v1/resources/"
+      const url = process.env.REACT_APP_API_URL + "/api/v1/resources/mypage/create"
 
       const createItemResponse = await fetch(url, {
 
@@ -102,7 +102,7 @@ export default class ItemContainer extends Component {
         },
         credentials: 'include',
         body: JSON.stringify(itemToAdd)
-      
+
       })
 
       const createItemJson = await createItemResponse.json()

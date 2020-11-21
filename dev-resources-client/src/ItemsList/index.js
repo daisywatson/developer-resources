@@ -2,7 +2,6 @@ import React from 'react'
 import { Card, Button } from 'semantic-ui-react'
 
 
-
 export default function ItemsList(props) {
 	const items = props.items.map(item => {
 		return (
@@ -34,7 +33,7 @@ export default function ItemsList(props) {
 					onClick={() => props.editItem(item.id)}>
 					Edit {item.name}
 					</Button>
-					
+
 				</Card.Content>
 			</Card>
 		)

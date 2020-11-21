@@ -3,6 +3,7 @@ import './App.css'
 import ItemContainer from './ItemContainer'
 import LoginAndRegistration from './LoginAndRegistration'
 import Header from './Header'
+import HomeContainer from './HomeContainer'
 
 //***********************************************************************
 
@@ -13,7 +14,7 @@ export default class App extends Component {
 
     this.state = {
       loggedIn: false,
-      loggedInUsername: '' 
+      loggedInUsername: ''
     }
   }
 
@@ -153,14 +154,15 @@ export default class App extends Component {
 
           :
 
-          <LoginAndRegistration 
+          <LoginAndRegistration
 
             login={this.login}
 
             register={this.register}
 
-          /> 
-        }
+          />
+          }
+
       </div>
     )
   }
