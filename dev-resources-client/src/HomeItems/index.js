@@ -14,6 +14,9 @@ export default function HomeItems(props) {
             <Card.Description>
               {item.description}
             </Card.Description>
+            <Card.Description>
+              <a href={item.media_link}>{item.media_link}</a>
+            </Card.Description>
             <Card.Content>
               {item.created_at}
             </Card.Content>
