@@ -9,12 +9,8 @@ export default function ItemsList(props) {
 				<Card.Content textAlign={'center'}>
 
 					<Card.Header>
-						{item.name}
+						<a href={item.link}>{item.name}</a>
 					</Card.Header>
-
-					<Card.Meta>
-						{item.link}
-					</Card.Meta>
 
 					<Card.Description>
 						{item.description}

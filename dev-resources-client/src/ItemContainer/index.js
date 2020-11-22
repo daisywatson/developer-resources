@@ -34,7 +34,7 @@ export default class ItemContainer extends Component {
 
     try {
 
-      const url = process.env.REACT_APP_API_URL + "/api/v1/resources/"
+      const url = process.env.REACT_APP_API_URL + "/api/v1/resources/mypage"
 
       const itemsResponse = await fetch(url, {
 
@@ -199,7 +199,7 @@ export default class ItemContainer extends Component {
         ?
 
         <HomeContainer />
-        
+
         :
 
           <React.Fragment>

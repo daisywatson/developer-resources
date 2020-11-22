@@ -9,17 +9,11 @@ export default function HomeItems(props) {
         <Card key={item.id}>
           <Card.Content textAlign={'center'}>
             <Card.Header>
-              {item.name}
+              <a href={item.link}>{item.name}</a>
             </Card.Header>
-            <Card.Meta>
-              {item.link}
-            </Card.Meta>
             <Card.Description>
               {item.description}
             </Card.Description>
-            <Card.Meta>
-              {item.media_link}
-            </Card.Meta>
             <Card.Content>
               {item.created_at}
             </Card.Content>
