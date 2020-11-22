@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Form, Button, Label, TextArea, Segment } from 'semantic-ui-react'
+
+//*************************************************************************
 
 export default class NewItemForm extends Component {
   constructor(props) {
@@ -11,72 +14,81 @@ export default class NewItemForm extends Component {
       media_link: ''
     }
   }
+//*************************************************************************
 
   handleChange = (event) => {
+
     this.setState({
+
       [event.target.name]: event.target.value
+
     })
   }
 
+//*************************************************************************
 
   handleSubmit = (event) => {
+
     event.preventDefault()
+
     this.props.createItem(this.state)
+
     this.setState({
       name: '',
       link: '',
       description: '',
       media_link: ''
+
     })
   }
 
+//*************************************************************************
 
   render() {
     return (
-      <div className='newItemForm'>
+      <Segment>
         <h2>Upload a Resource</h2>
-        <form>
-          <fieldset>
-            <label>Resource name:</label>
-            <input
-              type="text"
-              name="name"
-              value={this.state.name}
-              placeholder="Enter a resource"
-              onChange={this.handleChange}
-            />
-          </fieldset>
-          <fieldset>
-            <label>Link:</label>
-            <input
-              type="text"
-              name="link"
-              value={this.state.link}
-              placeholder="Enter a link"
-              onChange={this.handleChange}
-            />
-          </fieldset>
-          <fieldset>
-            <label>Description:</label>
-            <textarea rows="3"
-              name="description"
-              value={this.state.description}
-              onChange={this.handleChange}>Enter a description
-            </textarea>
-          </fieldset>
-          <fieldset>
-            <label>Image/video link (optional):</label>
-            <input
-              type="text"
-              name="media_link"
-              value={this.state.link}
-              placeholder="Enter a media link"
-              onChange={this.handleChange}
-            />
-          </fieldset>
-          <button type="submit">Upload Resource</button>
-        </form>
-      </div>
+        <Form onSubmit={this.handleSubmit}>
+
+          <Label horizontal>Resource name:</Label>
+          <Form.Input
+            type="text"
+            name="name"
+            value={this.state.name}
+            placeholder="Enter a resource"
+            onChange={this.handleChange}
+          />
+
+          <Label horizontal>Link:</Label>
+          <Form.Input
+            type="text"
+            name="link"
+            value={this.state.link}
+            placeholder="Enter a link"
+            onChange={this.handleChange}
+          />
+
+          <Label horizontal>Description:</Label>
+          <TextArea
+            rows={3}
+            name="description"
+            value={this.state.description}
+            placeholder='Enter Resource Description'
+            onChange={this.handleChange}
+          />
+
+          <Label horizontal>Media(optional):</Label>
+          <Form.Input
+            type="text"
+            name="media_link"
+            value={this.state.link}
+            placeholder="Enter a media link"
+            onChange={this.handleChange}
+          />
+
+          <Button type="submit">Upload Resource</Button>
+        </Form>
+      </Segment>
     )
   }
 }
