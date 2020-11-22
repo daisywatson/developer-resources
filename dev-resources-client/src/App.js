@@ -4,6 +4,7 @@ import ItemContainer from './ItemContainer'
 import LoginAndRegistration from './LoginAndRegistration'
 import ResourcePagesContainer from './ResourcePagesContainer'
 import Header from './Header'
+import NavBar from './NavBar'
 
 //***********************************************************************
 
@@ -154,7 +155,7 @@ export default class App extends Component {
 
           :
 
-          <LoginAndRegistration
+          <NavBar
 
             login={this.login}
 

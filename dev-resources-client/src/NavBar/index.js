@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import './App.css'
 import HomeContainer from '../HomeContainer'
 import LoginAndRegistration from '../LoginAndRegistration'
 import { Button } from 'semantic-ui-react'
@@ -29,7 +28,7 @@ export default class NavBar extends Component {
       return (
         <div className="ResourcePagesContainer">
           <Button primary onClick={() =>this.setShowHome()}> Home </Button>
-          <Button primary onClick={() =>this.setShowLogin()}> Login </Button>
+          <Button primary onClick={() =>this.setShowLogin()}> Login or Register </Button>
           <h1>Developer Resource Site</h1>
           {
             this.state.showHome
