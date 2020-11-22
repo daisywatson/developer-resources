@@ -1,13 +1,22 @@
 import React, { Component } from 'react'
 import HomeItems from '../HomeItems'
+import ItemContainer from '../ItemContainer'
+import { Button } from 'semantic-ui-react'
 
 export default class HomeContainer extends Component {
   constructor(props) {
     super(props)
 
       this.state = {
-       items: []
+       items: [],
+       action: ''
      }
+    }
+
+    setActionState = (action) => {
+      this.setState({
+        action: action
+      })
     }
 
     getItems = async () => {
@@ -44,7 +53,10 @@ export default class HomeContainer extends Component {
 
     render() {
       return (
-        <HomeItems items={this.state.items} />
+        <div className="HomeContainer">
+          <h3>All Resources List:</h3>
+          <HomeItems items={this.state.items} />
+      </div>
      )
     }
 }

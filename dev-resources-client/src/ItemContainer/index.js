@@ -192,18 +192,7 @@ export default class ItemContainer extends Component {
  render() {
    return (
      <div className="itemContainer">
-        <h1>Developer Resource Site</h1>
 
-      {
-        this.state.action === 'Home Container'
-        ?
-
-        <HomeContainer />
-
-        :
-
-          <React.Fragment>
-            <Button primary onClick={() =>this.setActionState('Home Container')}> View All Resources </Button>
             <h3>My Resource List:</h3>
             <NewItemForm createItem={this.createItem} />
             <ItemsList
@@ -211,8 +200,6 @@ export default class ItemContainer extends Component {
               editItem={this.editItem}
               deleteItem={this.deleteItem}
             />
-          </React.Fragment>
-        }
 
         {
           this.state.idOfItemToEdit !== -1

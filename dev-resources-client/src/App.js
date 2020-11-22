@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import './App.css'
 import ItemContainer from './ItemContainer'
 import LoginAndRegistration from './LoginAndRegistration'
+import ResourcePagesContainer from './ResourcePagesContainer'
 import Header from './Header'
 
 //***********************************************************************
@@ -147,7 +148,7 @@ export default class App extends Component {
 
             <Header username={this.state.loggedInUsername} logout={this.logout} />
 
-            <ItemContainer />
+            <ResourcePagesContainer />
 
           </React.Fragment>
 
