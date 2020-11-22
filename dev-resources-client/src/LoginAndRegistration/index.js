@@ -61,7 +61,7 @@ export default class LoginAndRegistrationForm extends Component {
 	render() {
 		return (
 	      <div>
-	        <h2>{this.state.action} Here</h2>
+	        <h2 className='loginHeader'>{this.state.action} Here</h2>
 
 	        <Form onSubmit={this.handleSubmit}>
 
@@ -90,11 +90,11 @@ export default class LoginAndRegistrationForm extends Component {
 	        {
 	          this.state.action === "Login"
 	          ?
-	          <p>
+						<p className='loginSubscript'>
 	            Not a member? Sign up <span className="fake-link" onClick={this.switchForm}>here</span>.
 	          </p>
 	          :
-	          <p>
+	          <p className='loginSubscript'>
 	            Already have an account? Log in <span className="fake-link" onClick={this.switchForm}>here</span>.
 	          </p>
 

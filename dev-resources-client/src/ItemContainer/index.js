@@ -3,6 +3,7 @@ import ItemsList from '../ItemsList'
 import NewItemForm from '../NewItemForm'
 import EditItemForm from '../EditItemForm'
 import HomeContainer from '../HomeContainer'
+import { Button } from 'semantic-ui-react'
 
 //*************************************************************************
 
@@ -192,20 +193,24 @@ export default class ItemContainer extends Component {
    return (
      <div className="itemContainer">
         <h1>Developer Resource Site</h1>
-        <h3>My Resource List:</h3>
-        <button onClick={() =>this.setActionState('Home Container')}> View All Resources </button>
-        {
-          this.state.action === 'Home Container'
-          ?
-          <HomeContainer />
-          :
+
+      {
+        this.state.action === 'Home Container'
+        ?
+
+        <HomeContainer />
+        
+        :
+
           <React.Fragment>
-          <NewItemForm createItem={this.createItem} />
-          <ItemsList
-            items={this.state.items}
-            editItem={this.editItem}
-            deleteItem={this.deleteItem}
-          />
+            <Button primary onClick={() =>this.setActionState('Home Container')}> View All Resources </Button>
+            <h3>My Resource List:</h3>
+            <NewItemForm createItem={this.createItem} />
+            <ItemsList
+              items={this.state.items}
+              editItem={this.editItem}
+              deleteItem={this.deleteItem}
+            />
           </React.Fragment>
         }
 

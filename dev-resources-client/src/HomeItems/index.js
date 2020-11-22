@@ -1,23 +1,37 @@
 import React, {Component} from 'react'
-//import { Card, Button } from 'semantic-ui-react'
+import { Card } from 'semantic-ui-react'
 
 export default function HomeItems(props) {
 
-const itemsToDisplay = props.items.map(item => {
-    let showRoute = "/app/v1/resources/"
-    return(
-        <div key={item.id}>
-          <p> Name: {item.name} </p>
-          <a href={item.link}>{item.link}</a>
-          <p> Description: {item.description}  </p>
-          <a href={item.media_link}>{item.media_link}</a>
-          <p> Created at: {item.created_at} </p>
-        </div>
+  const itemsToDisplay = props.items.map(item => {
+  let showRoute = "/app/v1/resources/"
+      return(
+        <Card key={item.id}>
+          <Card.Content textAlign={'center'}>
+            <Card.Header>
+              {item.name}
+            </Card.Header>
+            <Card.Meta>
+              {item.link}
+            </Card.Meta>
+            <Card.Description>
+              {item.description}
+            </Card.Description>
+            <Card.Meta>
+              {item.media_link}
+            </Card.Meta>
+            <Card.Content>
+              {item.created_at}
+            </Card.Content>
+          </Card.Content>
+        </Card>
+
       )
   })
 
     return(
-      <div>  {itemsToDisplay} </div>
+      <Card.Group centered={true}>
+        {itemsToDisplay}
+      </Card.Group>
     )
-
-}
+  }

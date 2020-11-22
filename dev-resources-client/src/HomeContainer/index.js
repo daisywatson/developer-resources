@@ -19,6 +19,7 @@ export default class HomeContainer extends Component {
      console.log(url)
     const itemsResponse = await fetch(url, {
         method: 'GET',
+        credentials: 'include',
         headers: {
           'Content-Type': 'application/json'
         }

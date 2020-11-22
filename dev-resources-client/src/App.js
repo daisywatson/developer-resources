@@ -3,7 +3,6 @@ import './App.css'
 import ItemContainer from './ItemContainer'
 import LoginAndRegistration from './LoginAndRegistration'
 import Header from './Header'
-import HomeContainer from './HomeContainer'
 
 //***********************************************************************
 
@@ -162,7 +161,7 @@ export default class App extends Component {
 
           />
           }
-          
+
       </div>
     )
   }
