@@ -3,7 +3,6 @@ import HomeContainer from '../HomeContainer'
 import ItemContainer from '../ItemContainer'
 import { Button } from 'semantic-ui-react'
 
-
 export default class ResourcePagesContainer extends Component {
   constructor(props) {
     super(props)
