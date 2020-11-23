@@ -5,7 +5,7 @@ This app provides a place for developers to post and share their favorite resour
   * Post Heroku link once deployed
   
 ## Wireframes
-  * https://www.figma.com/file/MkA8YDeeFdd1OgJM90qdSa/Wireframes?node-id=0%3A1
+  * https://www.figma.com/file/MkA8YDeeFdd1OgJM90qdSa/Wireframes?node-id=0%3A1 (update link once image of wireframes posted to repo).
   
 ## User Story
  * To use the app, the user accesses it from their browser at the above link, which will open to the homepage.
