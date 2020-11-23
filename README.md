@@ -21,3 +21,13 @@ This app provides a place for developers to post and share their favorite resour
  ## Technical Specifications
  This app was created using Flask, React and Semantic UI React. It is deployed on Heroku and requires no installation. 
  
+## Challenges
+The development team ran into a number of challenges with this project, the largest of which were:
+  * Toggling back and forth between the "all resources" and "my page" views and getting the correct data to populate each of those pathways
+  * Creating a navigation bar in React
+ 
+## Potential Forthcoming Features
+There are a number of features the development team would like to add:
+ * To add another model that enables users to track workshops and pull location information from an API and displays a map of the workshop location. Similar to the resource model we created, a user could view all workshops that have been entered by all users and the workshops they have entered in separate views. 
+ * The ability to "like" resource and workshops and to create associated "favorities" views from the likes
+ * A delete modal that asks a user if they are sure they want to delete
