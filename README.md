@@ -1,34 +1,70 @@
-# Developer Resources
-This app provides a place for developers to post and share their favorite resources and to learn about resources that other developers are using. The app is a collaborative effort among Robert Norwood, Danielle Scaturro and Spencer Watson. 
+# Getting Started with Create React App
 
-## To access the App
-  * Post Heroku link once deployed
-  
-## Wireframes
-  * https://www.figma.com/file/MkA8YDeeFdd1OgJM90qdSa/Wireframes?node-id=0%3A1 (update link once image of wireframes posted to repo).
-  
-## User Story
- * To use the app, the user accesses it from their browser at the above link, which will open to the homepage.
- * The homepage displays "Home" and "Login or Register" buttons at the top of the screen. It also displays the full collection of resources entered by all the users in a card format. The user can click through to a resource or view embedded videos directly in a card.
- * The user can register, if they are new to the site, or login via the button at the top of the screen.
- * Once logged in, the user is directed to "My Resource Page." From there: 
-    * The user can toggle to "View All Resources" through a button near the top-left of the screen. 
-    * They can also enter a new resource through the "Upload Resource" form in the center of the screen.
-    * Under this form, is a listing of the user's personal resources, which they can edit or delete to keep the list fresh and relevant.
-    * Just as with the All Resources view, the user can click through links in the display cards to access a resource and also view videos directly in the app.
-    * The user can logout via the link in the upper right corner of the app.
-    
- ## Technical Specifications
- This app was created using Python/Flask, React and Semantic UI React. It is deployed on Heroku and requires no installation. 
- 
-## Challenges
-The development team ran into a number of challenges with this project, the largest of which were:
-  * Toggling back and forth between the "all resources" and "my page" views and getting the correct data to populate each of those pathways
-  * Creating a navigation bar in React
- 
-## Potential Forthcoming Features
-There are a number of features the development team would like to add:
- * To add another model that enables users to track workshops and pull location information from an API and displays a map of the workshop location. Similar to the resource model we created, a user could view all workshops that have been entered by all users and the workshops they have entered in separate views. 
- * The ability to "like" resource and workshops and to create associated "favorities" views from the likes
- * A delete modal that asks a user if they are sure they want to delete
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Available Scripts
+
+In the project directory, you can run:
+
+### `npm start`
+
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
+
+### `npm test`
+
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+
+### `npm run build`
+
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
+
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
+
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
