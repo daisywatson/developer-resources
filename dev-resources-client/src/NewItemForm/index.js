@@ -80,7 +80,7 @@ export default class NewItemForm extends Component {
           <Label horizontal>YouTube Link (optional):</Label>
           <Form.Input
             type="text"
-            name="youtube_link"
+            name="media_link"
             value={this.state.media_link}
             placeholder="Enter an embedded link"
             onChange={this.handleChange}
