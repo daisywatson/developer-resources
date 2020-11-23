@@ -26,7 +26,7 @@ export default class EditItemForm extends Component {
   }
 
 //*************************************************************************
-  
+
   handleSubmit = (event) => {
     event.preventDefault()
       this.props.updateItem(this.state)
@@ -39,7 +39,7 @@ export default class EditItemForm extends Component {
       <Segment>
         <h2>Edit Resource</h2>
         <Form onSubmit={this.handleSubmit}>
-        
+
           <label>Resource name:</label>
           <Form.Input
             type="text"
@@ -59,21 +59,21 @@ export default class EditItemForm extends Component {
           />
 
           <label>Description:</label>
-          <TextArea 
+          <TextArea
             rows="3"
             name="description"
             value={this.state.description}
             placeholder="Enter Resource Description"
             onChange={this.handleChange}
           />
-          
 
-          <label>Media(optional):</label>
+
+          <label>YouTube Link (optional):</label>
           <Form.Input
             type="text"
             name="media_link"
             value={this.state.link}
-            placeholder="Enter a media link"
+            placeholder="Enter an embedded link"
             onChange={this.handleChange}
           />
 

@@ -1,7 +1,8 @@
 body {
   background-color: #3b414d;
   color: ghostwhite;
-  margin: 25px;
+  margin: 0 auto;
+  width: 60%;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -16,6 +17,14 @@ code {
 
 h2 {
   color: black;
+}
+
+.HomeContainer {
+  margin-top: 25px;
+}
+
+.ResourcePagesContainer {
+  margin-top: 25px;
 }
 
 .loginHeader {

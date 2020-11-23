@@ -16,9 +16,26 @@ export default function ItemsList(props) {
 						{item.description}
 					</Card.Description>
 
+					{
+						item.media_link !== ''
+
+						?
+
 					<Card.Description>
-						<a href={item.media_link}>{item.media_link}</a>
+						<iframe
+							width="250"
+							src={item.media_link}
+							frameborder="0"
+							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+							allowfullscreen>
+							</iframe>
 					</Card.Description>
+
+					:
+
+					''
+
+					}
 
 				</Card.Content>
 

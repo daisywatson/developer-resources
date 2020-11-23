@@ -31,7 +31,7 @@ export default class ResourcePagesContainer extends Component {
       return (
         <div className="ResourcePagesContainer">
           <h1>Developer Resource Site</h1>
-          <Button primary onClick={() =>this.setShowHome()}> {this.state.toggleButtonText} </Button>
+          <Button className='toggleBtn' primary onClick={() =>this.setShowHome()}> {this.state.toggleButtonText} </Button>
           {
             this.state.showHome
             ?
