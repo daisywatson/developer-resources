@@ -1,18 +1,23 @@
 import React, { Component } from 'react'
+import { Form, Button, Label, Segment,TextArea, Header } from 'semantic-ui-react'
 
-
+//*************************************************************************
 //variable itemToEdit needs to to match what RN creates in main container
+
 export default class EditItemForm extends Component {
   constructor(props) {
     super(props)
 
     this.state = {
+
       name: props.itemToEdit.name,
       link: props.itemToEdit.link,
       description: props.itemToEdit.description,
       media_link: props.itemToEdit.media_link
+
     }
   }
+//*************************************************************************
 
   handleChange = (event) => {
     this.setState({
@@ -20,58 +25,61 @@ export default class EditItemForm extends Component {
     })
   }
 
-  
+//*************************************************************************
+
   handleSubmit = (event) => {
     event.preventDefault()
       this.props.updateItem(this.state)
   }
 
+//*************************************************************************
+
   render() {
     return (
-      <div className='editItemForm'>
+      <Segment>
         <h2>Edit Resource</h2>
-        <form>
-          <fieldset>
-            <label>Resource name:</label>
-            <input
-              type="text"
-              name="name"
-              value={this.state.name}
-              placeholder="Enter a resource"
-              onChange={this.handleChange}
-            />
-          </fieldset>
-          <fieldset>
-            <label>Link:</label>
-            <input
-              type="text"
-              name="link"
-              value={this.state.link}
-              placeholder="Enter a link"
-              onChange={this.handleChange}
-            />
-          </fieldset>
-          <fieldset>
-            <label>Description:</label>
-            <textarea rows="3"
-              name="description"
-              value={this.state.description}
-              onChange={this.handleChange}>Enter a description
-            </textarea>
-          </fieldset>
-          <fieldset>
-            <label>Image/video link (optional):</label>
-            <input
-              type="text"
-              name="media_link"
-              value={this.state.link}
-              placeholder="Enter a media link"
-              onChange={this.handleChange}
-            />
-          </fieldset>
-          <button type="submit">Edit Resource</button>
-        </form>
-      </div>
+        <Form onSubmit={this.handleSubmit}>
+
+          <label>Resource name:</label>
+          <Form.Input
+            type="text"
+            name="name"
+            value={this.state.name}
+            placeholder="Enter a resource"
+            onChange={this.handleChange}
+          />
+
+          <label>Link:</label>
+          <Form.Input
+            type="text"
+            name="link"
+            value={this.state.link}
+            placeholder="Enter a link"
+            onChange={this.handleChange}
+          />
+
+          <label>Description:</label>
+          <TextArea
+            rows="3"
+            name="description"
+            value={this.state.description}
+            placeholder="Enter Resource Description"
+            onChange={this.handleChange}
+          />
+
+
+          <label>YouTube Link (optional):</label>
+          <Form.Input
+            type="text"
+            name="media_link"
+            value={this.state.link}
+            placeholder="Enter an embedded link"
+            onChange={this.handleChange}
+          />
+
+          <Button type="submit">Edit Resource</Button>
+        </Form>
+      </Segment>
     )
   }
 }
