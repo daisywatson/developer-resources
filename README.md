@@ -18,5 +18,6 @@ This app provides a place for developers to post and share their favorite resour
     * Just as with the All Resources view, the user can click through links in the display cards to access a resource and also view videos directly in the app.
     * The user can logout via the link in the upper right corner of the app.
     
- 
+ ## Technical Specifications
+ This app was created using Flask, React and Semantic UI React. It is deployed on Heroku and requires no installation. 
  
