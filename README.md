@@ -28,6 +28,7 @@ The development team ran into a number of challenges with this project, the larg
  
 ## Potential Forthcoming Features
 There are a number of features the development team would like to add:
+ * To embed or preview videos, articles, webpages, etc. 
  * To add another model that enables users to track workshops and pull location information from an API and displays a map of the workshop location. Similar to the resource model we created, a user could view all workshops that have been entered by all users and the workshops they have entered in separate views. 
  * The ability to "like" resource and workshops and to create associated "favorities" views from the likes
  * A delete modal that asks a user if they are sure they want to delete
