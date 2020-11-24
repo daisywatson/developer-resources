@@ -27,11 +27,12 @@ export default class HomeContainer extends Component {
      console.log("about to fetch data from:")
      console.log(url)
     const itemsResponse = await fetch(url, {
-        method: 'GET',
+        // method: 'GET',
+        // mode: "no-cors",
         credentials: 'include',
-        headers: {
-          'Content-Type': 'application/json'
-        }
+        // headers: {
+        //   'Content-Type': 'application/json'
+        // }
       })
      console.log(itemsResponse)
      const itemsJson = await itemsResponse.json()
