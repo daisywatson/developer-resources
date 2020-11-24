@@ -2,10 +2,10 @@
 This app provides a place for developers to post and share their favorite resources and to learn about resources that other developers are using. The app is a collaborative effort among Robert Norwood, Danielle Scaturro and Spencer Watson. 
 
 ## To access the App
-  * Post Heroku link once deployed
+  * https://developer-resources-react.herokuapp.com/
   
 ## Wireframes
-  * https://www.figma.com/file/MkA8YDeeFdd1OgJM90qdSa/Wireframes?node-id=0%3A1 (update link once image of wireframes posted to repo).
+  * https://github.com/daisywatson/developer-resources/blob/main/Wireframes.png
   
 ## User Story
  * To use the app, the user accesses it from their browser at the above link, which will open to the homepage.
