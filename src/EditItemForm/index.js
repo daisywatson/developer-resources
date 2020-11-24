@@ -72,7 +72,7 @@ export default class EditItemForm extends Component {
           <Form.Input
             type="text"
             name="media_link"
-            value={this.state.link}
+            value={this.state.media_link}
             placeholder="Enter an embedded link"
             onChange={this.handleChange}
           />
